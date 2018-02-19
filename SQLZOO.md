@@ -47,3 +47,4 @@ select mdate, team1, sum(case when teamid = team1 then 1 else 0 end) as score1,
   group by mdate, team1, team2
   order by mdate, matchid, team1, team2
 ```
+**_why using join (instead of left join), the score1=score2=0 cases are dropped???_**
